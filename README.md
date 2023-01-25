@@ -1,7 +1,7 @@
 # Valuable-ankle
 Sexy pineapple
 
-![buh](https://github.com/nicolasbaez/Polyester-case/blob/main/xp002.gif)
+![buh](https://github.com/nicolasbaez/Valuable-ankle/blob/main/xp003.gif)
 ```javascript
 w = 500;
 k = 0;
