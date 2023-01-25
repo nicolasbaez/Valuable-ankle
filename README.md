@@ -25,6 +25,6 @@ draw = (_) => {
 };
 function keyPressed() {
   if (key === "s") {
-    saveGif("xp002.gif", 360, { delay: 0, units: "frames" });
+    saveGif("xp003.gif", 360, { delay: 0, units: "frames" });
   }
 }
