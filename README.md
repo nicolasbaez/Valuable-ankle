@@ -3,28 +3,27 @@ Sexy pineapple
 
 ![buh](https://github.com/nicolasbaez/Valuable-ankle/blob/main/xp003.gif)
 ```javascript
+a = 62.5;
 w = 500;
-k = 0;
-setup = (_) => {
-  createCanvas(w, w, WEBGL);
-};
-e = (z) => {
-  p = 2 * PI;
-  colorMode(HSB, p);
-  for (i = 0; i < p; i += 0.05) {
-    translate(0, 0, z / 2);
-    stroke(i, p, p);
-    strokeWeight(z * 4);
-    point(50 * cos(i + k), 50 * sin(i + k));
-  }
-};
+h = w / 2;
+l = 0;
+setup = (_) => createCanvas(w, w, WEBGL);
 draw = (_) => {
-  clear();
-  for (j = 0; j < 8; j++) e(j);
-  k += 0.1;
+  k = 0;
+  for (j = -h; j < w + h; j += a) {
+    beginShape(TRIANGLE_STRIP);
+    for (i = -w; i <= w + h; i += a) {
+      fill(h, noise(i) * h, 0);
+      if (k % 2) vertex(i, j, noise(i - l, j) * h);
+      else vertex(i, j + a, noise(i - l, j + a) * h);
+      k++;
+    }
+    endShape();
+  }
+  l += 0.01;
 };
 function keyPressed() {
   if (key === "s") {
-    saveGif("xp003.gif", 360, { delay: 0, units: "frames" });
+    saveGif("xp003.gif", 384, { delay: 0, units: "frames" });
   }
 }
